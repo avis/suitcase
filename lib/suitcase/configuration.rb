@@ -28,5 +28,26 @@ module Suitcase
     def self.hotel_cid
       @@hotel_cid if defined? @@hotel_cid
     end
+    
+    # @avi Flight
+  
+    def self.fight_api_key=(key)
+      @@flight_api_key = key
+    end
+
+    def self.flight_api_key
+      @@flight_api_key
+    end
+
+    def self.flight_cid=(cid)
+      @@flight_cid = cid
+    end
+
+    def self.flight_cid
+      @@flight_cid if defined? @@flight_cid
+    end
+    
+    
+    
   end
 end

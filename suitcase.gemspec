@@ -5,8 +5,8 @@ require "suitcase/version"
 Gem::Specification.new do |s|
   s.name        = "suitcase"
   s.version     = Suitcase::VERSION
-  s.authors     = ["Walter Nelson"]
-  s.email       = ["walter.john.nelson@gmail.com"]
+  s.authors     = ["Avi Saranga"]
+  s.email       = ["avi@openbsd.org.il"]
   s.homepage    = "http://github.com/thoughtfusion/suitcase"
   s.summary     = %q{Locates available hotels, rental cars, and flights}
   s.description = %q{Suitcase utilizes the EAN (Expedia.com) API for locating info about hotels, rental cars, and flights.}
