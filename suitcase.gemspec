@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Suitcase::VERSION
   s.authors     = ["Avi Saranga"]
   s.email       = ["avi@openbsd.org.il"]
-  s.homepage    = "http://github.com/thoughtfusion/suitcase"
+  s.homepage    = "http://smacked.org"
   s.summary     = %q{Locates available hotels, rental cars, and flights}
   s.description = %q{Suitcase utilizes the EAN (Expedia.com) API for locating info about hotels, rental cars, and flights.}
 

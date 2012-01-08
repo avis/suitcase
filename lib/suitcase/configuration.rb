@@ -31,7 +31,7 @@ module Suitcase
     
     # @avi Flight
   
-    def self.fight_api_key=(key)
+    def self.flight_api_key=(key)
       @@flight_api_key = key
     end
 

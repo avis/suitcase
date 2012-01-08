@@ -1,9 +1,9 @@
 module Suitcase
-  class EANException < Exception
-    def initialize(message)
-      super(message)
-    end
-  end
+  #class EANException < Exception
+  #  def initialize(message)
+  #    super(message)
+  #  end
+  #end
   
   
   class Flight
@@ -42,18 +42,22 @@ module Suitcase
 
       def self.find_by_info(info)
         params = info
-        params["numResultsRequested"] = params[:results] ? params[:results] : 50
+        params["numResultsRequested"] = params[:results] ? params[:results] : 10
         params.delete(:results)
         params["originCityCode"] = params[:originCityCode].upcase
+        params.delete(:originCityCode)
         params["destinationCityCode"] = params[:destinationCityCode].upcase
+        params.delete(:destinationCityCode)
         params["departureDateTime"] = params[:departureDateTime]
         params["returnDateTime"] = params[:returnDateTime]
         params["tripType"] = "R" # roundtrip? 
         params["xmlResultFormat"] = "2"
+        params["Passengers"] = Hash.new #{["adultPassengers"]}
         params["Passengers"]["adultPassengers"] = params[:Passengers]
         params["fareClass"] = "B"
         
-        put(flight_url(:list, params))
+        #puts(flight_url(:list, params))
+        parsed = parse_response_xml(flight_url(:list, params))
         
         #flights = []
         #parsed = parse_response(url(:list, params))
@@ -62,6 +66,8 @@ module Suitcase
         #  hotels.push Hotel.new(parse_information(hotel_data))
         #end
         #flights
+        
+        
       end
     
     

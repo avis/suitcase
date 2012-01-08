@@ -13,7 +13,4 @@ require 'suitcase/hotel/room'
 require 'suitcase/hotel/payment_option'
 require 'suitcase/hotel/hotel'
 require 'suitcase/hotel/image'
-
-# @avi
-
-require 'suitecase/flight/flight'
+require 'suitcase/flight/flight'

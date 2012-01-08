@@ -23,6 +23,12 @@ Find nearby hotels:
       room = hotels.first.rooms(arrival: "2/19/2012", departure: "2/26/2012", rooms: [{ children: 1, ages: [8] }, { children: 1, ages: [12] }] # Check the availability of two rooms at that hotel with 1 child in each room of ages 8 and 9
       room.reserve!(info) # Not yet implemented
 
+
+Find Flights
+
+flights = Suitcase::Flight.find(:originCityCode => 'SFO', :destinationCityCode => 'TLV', :departureDateTime => '04/19/2012 11:00 AM', :returnDateTime => '06/19/2012 11:00 AM', :Passengers => '1')
+
+
 ### Caching
 
 You can setup a cache to store all API requests that do not contain secure information (i.e. anything but booking requests). A cache needs to be able store deeply nested Hashes and have a method called [] to access them. An example of setting the cache is given above.
